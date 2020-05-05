@@ -37,6 +37,25 @@ const NameField = ({ clientRegister }) => {
     )
 }
 
+const BusinessField = ({ clientRegister }) => {
+    const handleChange = ({ target }) => {
+        clientRegister.setup.set('business', target.value)
+    }
+
+    return (
+        <TextField
+            type="text"
+            id="business"
+            name="business"
+            label="Qual o seu negócio?"
+            color="secondary"
+            onChange={handleChange}
+            value={clientRegister.setup.state.business}
+            fullWidth={true}
+        />
+    )
+}
+
 const EmailField = ({ clientRegister }) => {
     const handleChange = ({ target }) => {
         clientRegister.setup.set('email', target.value)
@@ -99,33 +118,24 @@ export default function Component({ toggleJoin }) {
 
     const clientRegister = useFetch(
         {
-            endpoint: 'https://9d33d91c.ngrok.io/users/store',
+            endpoint: 'https://bb8a4939.ngrok.io/users/store',
             start: false,
             stateInit: {
                 name: null,
                 email: null,
                 phone_number: null,
                 password: null,
-            },
-            onSuccess: (data) => {
-                console.log(data)
-            },
-            config: {
-                cors: 'include',
+                business: null,
             },
         },
         'POST',
         fetch
     )
 
-    function handleRegister() {
-        console.log(clientRegister)
-    }
-
     const name =
-        clientRegister.setup.state && clientRegister.setup.state.name
-            ? clientRegister.setup.state.name
-            : 'divulgador'
+        clientRegister.data && clientRegister.data.name
+            ? clientRegister.data.name
+            : 'mercador'
 
     return (
         <div className={classes.root}>
@@ -137,13 +147,14 @@ export default function Component({ toggleJoin }) {
             <NameField clientRegister={clientRegister} />
             <PhoneNumberField clientRegister={clientRegister} />
             <PasswordField clientRegister={clientRegister} />
+            <BusinessField clientRegister={clientRegister} />
             {clientRegister.loading.isOn() ? (
                 <CircularProgress color="secondary" />
             ) : (
                 <Button
                     variant="contained"
                     className={classes.button}
-                    onClick={handleRegister}
+                    onClick={clientRegister.refresh.on}
                 >
                     Cadastrar
                 </Button>

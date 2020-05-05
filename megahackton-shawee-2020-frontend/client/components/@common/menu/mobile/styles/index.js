@@ -15,7 +15,7 @@ export const stylesRoot = makeStyles((theme) => ({
         boxShadow: 'unset',
         padding: theme.spacing(CONSTANTS.SPACING.BIG),
         marginBottom: '2em',
-        width: '99vw',
+        width: '100vw',
         top: '0px',
         transition: 'all .3s ease-in',
         animation: `$show 1.5s ease-in`,
@@ -32,6 +32,12 @@ export const stylesRoot = makeStyles((theme) => ({
 
     title: {
         fontSize: '1.1em',
+    },
+
+    logo: {
+        width: '4em',
+        objectFit: 'cover',
+        alignSelf: 'center',
     },
 }))
 

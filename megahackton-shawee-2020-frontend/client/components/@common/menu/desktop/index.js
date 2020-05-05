@@ -18,14 +18,8 @@ const Component = ({}) => {
 
     return (
         <div className={classes.root}>
-            <Button
-                className={classes.buttonTitle}
-                href="/index"
-                onClick={() => {}}
-            >
-                <span>
-                    {'{ '} <strong>BTEX</strong> {' }'}
-                </span>
+            <Button className={classes.buttonTitle} href="/" onClick={() => {}}>
+                <img className={classes.logo} src={'/logo.png'} />
             </Button>
             <PagesComponent />
         </div>

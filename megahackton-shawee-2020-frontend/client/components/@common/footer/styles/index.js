@@ -12,7 +12,7 @@ export const stylesRoot = makeStyles((theme) => ({
             justifySelf: 'center',
         },
         padding: theme.spacing(CONSTANTS.SPACING.SMALL, CONSTANTS.SPACING.BIG),
-        width: '100vw',
+        minWidth: '100vw',
         top: '0px',
         transition: 'all .3s ease-in',
         backgroundColor: THEME.THEME_COLOR.secondary.main,

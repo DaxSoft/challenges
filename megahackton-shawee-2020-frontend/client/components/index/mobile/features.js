@@ -30,8 +30,8 @@ export default function Component({}) {
                             preserveAspectRatio: 'xMidYMid slice',
                         },
                     }}
-                    width={'75%'}
-                    height={'75%'}
+                    width={'6em'}
+                    height={'6em'}
                 />
             </div>
             <div

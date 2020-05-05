@@ -17,8 +17,12 @@ import loadable from '@loadable/component'
 
 import { MenuMobile, MenuDesktop } from '../client/components/@common/menu'
 
-const JoinDesktop = loadable(() => import('../client/components/join/desktop'))
-const JoinMobile = loadable(() => import('../client/components/join/mobile'))
+const DashboardDesktop = loadable(() =>
+    import('../client/components/dashboard/desktop')
+)
+const DashboardMobile = loadable(() =>
+    import('../client/components/dashboard/mobile')
+)
 
 const Footer = loadable(() => import('../client/components/@common/footer'))
 
@@ -31,7 +35,7 @@ const Footer = loadable(() => import('../client/components/@common/footer'))
 const Desktop = ({}) => (
     <div>
         <MenuDesktop />
-        <JoinDesktop />
+        <DashboardDesktop />
         <Footer />
     </div>
 )
@@ -45,7 +49,7 @@ const Desktop = ({}) => (
 const Mobile = ({}) => (
     <div>
         <MenuMobile />
-        <JoinMobile />
+        <DashboardMobile />
     </div>
 )
 
@@ -60,7 +64,7 @@ export default function Page({}) {
     return (
         <div>
             <Head>
-                <title>Bairro Amigo | Junte-se</title>
+                <title>Bairro Amigo | Dashboard de Exemplo</title>
                 <meta name="robots" content="index, follow" />
             </Head>
             {screenSize.orientation === 'landscape' ? <Desktop /> : <Mobile />}

@@ -38,6 +38,12 @@ export const stylesRoot = makeStyles((theme) => ({
         height: 'max-content',
         marginLeft: '2em',
     },
+
+    logo: {
+        width: '6em',
+        objectFit: 'cover',
+        alignSelf: 'center',
+    },
 }))
 
 export const optionsStyles = makeStyles((theme) => ({

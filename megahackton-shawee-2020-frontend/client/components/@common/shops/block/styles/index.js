@@ -5,13 +5,12 @@ export const stylesRoot = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(CONSTANTS.SPACING.DEFAULT),
         display: 'grid',
-        gridTemplateRows: 'max-content',
+        gridTemplateRows: '10em 3em',
         gridGap: '1em',
         justifyContent: 'space-evenly',
         justifyItems: 'center',
         alignItems: 'center',
         width: '12em',
-        height: '12em',
         boxShadow: THEME.BOX_SHADOW.light(),
         borderRadius: '.5rem',
         backgroundColor: THEME.THEME_COLOR.background,
@@ -31,8 +30,9 @@ export const stylesRoot = makeStyles((theme) => ({
     },
 
     logo: {
-        width: '7em',
+        width: '10em',
+        height: '10em',
         alignSelf: 'center',
-        objectFit: 'cover',
+        objectFit: 'contain',
     },
 }))

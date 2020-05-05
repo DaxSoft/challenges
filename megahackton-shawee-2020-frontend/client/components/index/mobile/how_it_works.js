@@ -6,6 +6,7 @@ import React from 'react'
 
 import { stylesRoot } from './styles/how_it_works'
 import { Typography, Button } from '@material-ui/core'
+import Scrollable from 'react-indiana-drag-scroll'
 
 // ------------------------------------------------------------------
 // | [Component]
@@ -19,7 +20,7 @@ export default function Component({}) {
             <Typography variant="h4" className={classes.title}>
                 Como funciona
             </Typography>
-            <div className={classes.col}>
+            <Scrollable horizontal={true} className={classes.col}>
                 <div className={classes.block}>
                     <img
                         src="/svg/undraw_working_remotely_jh40.svg"
@@ -71,7 +72,7 @@ export default function Component({}) {
                         comissão no seu extrato do BTEX.
                     </Typography>
                 </div>
-            </div>
+            </Scrollable>
             <Typography variant="h5" className={classes.legend}>
                 Seja a mão amiga de seu bairro. <br />O processo de cadastrar é
                 rápido e simples.

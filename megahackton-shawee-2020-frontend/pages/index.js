@@ -34,6 +34,7 @@ const Desktop = ({}) => (
     <div>
         <MenuDesktop />
         <IndexDesktop />
+        <Footer />
     </div>
 )
 
@@ -61,11 +62,10 @@ export default function Page({}) {
     return (
         <div>
             <Head>
-                <title>BTEX</title>
+                <title>Bairro Amigo | Seja a mão amiga de seu bairro</title>
                 <meta name="robots" content="index, follow" />
             </Head>
             {screenSize.orientation === 'landscape' ? <Desktop /> : <Mobile />}
-            <Footer />
         </div>
     )
 }

@@ -11,8 +11,8 @@ export default function Component({}) {
 
     return (
         <div className={classes.root}>
-            <Button alt="projects" onClick={() => router.push('/about')}>
-                Sobre
+            <Button alt="projects" onClick={() => router.push('/dashboard')}>
+                Dashboard
             </Button>
         </div>
     )

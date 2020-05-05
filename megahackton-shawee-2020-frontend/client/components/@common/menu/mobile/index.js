@@ -23,10 +23,7 @@ const Component = ({}) => {
     return (
         <div className={classes.root}>
             <Button className={classes.buttonTitle} href="/" onClick={() => {}}>
-                <Typography variant="h4" className={classes.title}>
-                    {'{ '}
-                    <strong>michael</strong>.willian{' }'}
-                </Typography>
+                <img className={classes.logo} src={'/logo.png'} />
             </Button>
             {toggle.isOff() ? (
                 <IconButton onClick={toggle.on}>

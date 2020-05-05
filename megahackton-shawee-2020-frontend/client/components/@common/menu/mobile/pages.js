@@ -19,38 +19,14 @@ export default function Component({ toggle }) {
                 </IconButton>
             </span>
             <div className={classes.row}>
-                <Button alt="projects" onClick={() => router.push('/todo')}>
-                    To-Do
-                </Button>
                 <Button
-                    alt="resources"
-                    onClick={() => router.push('/resources')}
+                    alt="projects"
+                    onClick={() => router.push('/dashboard')}
                 >
-                    Resources
+                    Dashboard
                 </Button>
-                <Button
-                    alt="github"
-                    target="_blank"
-                    href="https://github.com/DaxSoft"
-                    onClick={() => null}
-                >
-                    Github
-                </Button>
-                <Button
-                    alt="behance"
-                    target="_blank"
-                    href="https://www.behance.net/daxsoft"
-                    onClick={() => null}
-                >
-                    Behance
-                </Button>
-                <Button
-                    alt="linkedin"
-                    target="_blank"
-                    href="https://www.linkedin.com/in/michael-willian-325412114/"
-                    onClick={() => null}
-                >
-                    Linkedin
+                <Button alt="projects" onClick={() => router.push('/join')}>
+                    Participar
                 </Button>
             </div>
             <div />

@@ -9,6 +9,7 @@ import { useFetch } from '@vorlefan/react-hooks'
 import { stylesRoot } from './styles/shops'
 import { Typography, CircularProgress } from '@material-ui/core'
 import { ShopBlockComponent } from '../../@common/shops'
+import Scrollable from 'react-indiana-drag-scroll'
 
 // ------------------------------------------------------------------
 // | [handlers]
@@ -57,13 +58,13 @@ export default function Component({}) {
             {listShop.loading.isOn() ? (
                 <CircularProgress color="#0984e3" />
             ) : (
-                <div className={classes.col}>
+                <Scrollable horizontal={true} className={classes.col}>
                     {Array.isArray(listShop.data) &&
                         listShop.data.length > 0 &&
                         listShop.data.map((shopData, key) => (
                             <ShopBlockComponent key={key} shopData={shopData} />
                         ))}
-                </div>
+                </Scrollable>
             )}
         </div>
     )
